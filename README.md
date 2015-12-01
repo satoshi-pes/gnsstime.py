@@ -8,19 +8,15 @@ Requirements
 History
 -------
 0.0.3 (2014-12-04)
-~~~~~~~~~~~~~~~~~~
 * first release
 
 0.0.4 (2014-12-07)
-~~~~~~~~~~~~~~~~~~
 * bug fix
 
 0.0.5 (2014-12-09)
-~~~~~~~~~~~~~~~~~~
 * added 'gpscal' to the module function.
 
 0.0.6 (2015-12-01)
-~~~~~~~~~~~~~~~~~~
 * added a new leapsec.
 * modified julian day (mjd) support.
   added 'mjd2date', 'from_mjd', and a property 'mjd'.
