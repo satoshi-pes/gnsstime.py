@@ -20,6 +20,9 @@ History
 * added a new leapsec.
 * modified julian day (mjd) support.
   added 'mjd2date', 'from_mjd', and a property 'mjd'.
+
+0.0.7 (2015-12-03)
+* fix bug of 'gpst'.
   
 Example
 -------
@@ -51,7 +54,7 @@ Example
     doy     : 1
     gpsw    : 1616
     gpswd   : 6
-    gpst    : 2010-12-31T23:59:45
+    gpst    : 2011-01-01T00:00:15
     leapsec : -15
     mjd     : 55562.0
 
