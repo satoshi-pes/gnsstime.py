@@ -10,6 +10,7 @@ Supports addition of timedelta, subtraction of a datetime.
 2015/08/21 Added a new leapsec.
 2015/11/11 Added 'mjd2date'.
 2015/12/01 Added 'from_mjd' and a property 'mjd'.
+2015/12/03 Fixed bug of 'gpst'. The plus-minus sign was incorrect.  
 
 methods:
     gpscal        : return a tuple (doy, gpsw, gpswd).
@@ -280,7 +281,7 @@ class gnsstime(dt.datetime):
         """
         Return the gps time.
         """
-        return self + timedelta(seconds=self.leapsec)
+        return self - timedelta(seconds=self.leapsec)
 
     @property
     def mjd(self):
