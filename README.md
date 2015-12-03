@@ -21,7 +21,7 @@ History
 * modified julian day (mjd) support.
   added 'mjd2date', 'from_mjd', and a property 'mjd'.
 
-0.0.7 (2015-12-03)
+0.0.8 (2015-12-03)
 * fix bug of 'gpst'.
   
 Example
