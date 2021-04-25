@@ -11,6 +11,7 @@ Supports addition of timedelta, subtraction of a datetime.
 2015/11/11 Added 'mjd2date'.
 2015/12/01 Added 'from_mjd' and a property 'mjd'.
 2015/12/03 Fixed bug of 'gpst'. The plus-minus sign was incorrect.  
+2021/04/25 Fixed timezone problem.
 
 methods:
     gpscal        : return a tuple (doy, gpsw, gpswd).
@@ -73,15 +74,15 @@ gt1 - dt.timedelta(days=2) : 2010-12-30T00:00:00
 import datetime as dt
 from datetime import timedelta
 
-DT_MJD0 = dt.datetime(1858,11,17)
+DT_MJD0 = dt.datetime(1858,11,17, 0, 0, tzinfo=dt.timezone.utc)
 
 class gnsstime(dt.datetime):
     """
     gnsstime(year, month, day[, hour[, minute[, second[, microsecond]]]])
     """
     # datetime at the reference of GPST, MJD
-    dt_gpst0 = dt.datetime(1980, 1, 6)
-    dt_mjd0  = dt.datetime(1858,11,17)
+    dt_gpst0 = dt.datetime(1980, 1, 6, 0, 0, tzinfo=dt.timezone.utc)
+    dt_mjd0  = dt.datetime(1858,11,17, 0, 0, tzinfo=dt.timezone.utc)
     leaps    = []
 
     # leap seconds for GPST
