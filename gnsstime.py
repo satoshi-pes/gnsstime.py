@@ -92,6 +92,7 @@ class gnsstime(dt.datetime):
             self.sec  = sec
             return
 
+    leaps.append(leapsec(2017, 1, 1, sec=-18))
     leaps.append(leapsec(2015, 7, 1, sec=-17))
     leaps.append(leapsec(2012, 7, 1, sec=-16))
     leaps.append(leapsec(2009, 1, 1, sec=-15))
