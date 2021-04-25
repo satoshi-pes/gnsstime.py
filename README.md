@@ -23,6 +23,9 @@ History
 
 0.0.8 (2015-12-03)
 * fix bug of 'gpst'.
+
+0.0.9 (2021-04-25)
+* fix the timezone problem.
   
 Example
 -------
